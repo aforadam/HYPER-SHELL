@@ -8,7 +8,7 @@ module.exports = {
         // or `'canary'` for less polished but more frequent updates
         updateChannel: 'stable',
         // default font size in pixels for all tabs
-        fontSize: 12,
+        fontSize: 14,
         // font family with optional fallbacks
         fontFamily: '"Hasklug Nerd Font Mono", monospace',
         // default font weight: 'normal' or 'bold'
@@ -22,7 +22,7 @@ module.exports = {
         // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
         cursorColor: 'rgba(248,28,229,1)',
         // terminal text color under BLOCK cursor
-        cursorAccentColor: '#fff',
+        cursorAccentColor: '#FFF',
         // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
         cursorShape: 'BLOCK',
         // set to `true` (without backticks and without quotes) for blinking cursor
@@ -130,10 +130,10 @@ module.exports = {
         paneNavigation: {
             hotkeys: {
                 navigation: {
-                    up: 'command+w',
+                    up: 'command+d',
                     down: 'command+s',
                     left: 'command+a',
-                    right: 'command+d',
+                    right: 'command+f',
                 },
                 jump_prefix: 'command',
                 permutation_modifier: 'command',
@@ -165,9 +165,17 @@ module.exports = {
 
     localPlugins: [],
     keymaps: {
-	    "pane:splitRight": "alt+d",
-	    "pane:splitDown": "alt+s",
-	    "pane:close": "alt+w",
+        "pane:splitRight": "alt+d",
+        "pane:splitDown": "alt+s",
+        "pane:close": "alt+w",
+        "tab:next": [
+         "command+;",
+         "ctrl+tab"
+       ],
+        "tab:prev": [
+         "command+j",
+         "ctrl+shift+tab"
+       ], 
     },
 };
 //# sourceMappingURL=config-default.js.map
